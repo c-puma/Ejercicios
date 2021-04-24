@@ -1,0 +1,18 @@
+¿Cómo utilizar git desde la consola o terminal para sincronizar los cambios que tenemos
+en nuestro equipo local y queremos que también estén en el repositorio de GitHub?
+
+- Primero creamos un directorio desde la consola con el comando: mkdir ~/directorio_repositorio
+- Segundo nos movemos al directorio: mkdir ~/directorio_repositorio
+- Tercero clonamos nuestro repostorio con el comando: git clone https://github.com/nuestroUsuario/nuestroRepositorio
+- Y ahora si podemos trabajar en nuestro repostorio de forma local
+
+Y para sincronizar el repostorio local a remoto
+
+- Comprobamos los cambios con el comando: git status
+- Añadimos los cambios con el comando: git add
+- Ahora debemos hacer commit los archivos para poder sincronizarlos con el directorio remoto
+con el comando: git comit -m "nombreDelComit"
+-Finalmente, damos la orden para sincronizar nuestros cambios en local con el repositorio 
+remoto con el comando: git push origin master
+- Ahora, cada vez que hagamos cambios en nuestro repositorio remoto, nos bastará con el 
+siguiente comando para sincronizar en local: git pull
