@@ -1,0 +1,49 @@
+import java.util.*;
+public class Dia {
+
+	public static void main(String[] args) {
+
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Ingrese un digito del 1 al 7:");
+		int valor= sc.nextInt();
+		if(comprobarValor(valor)) {
+			System.out.println("El dia de la semana es: "+ dia(valor));
+		}
+		else{
+			System.out.println("El valor que ingreso no es correcto");
+		}
+	}
+
+	public static boolean comprobarValor(int a) {
+		boolean comp = false;
+		if(0<a && a<8) {
+			comp = true;
+		}
+		return comp;
+	}
+	public static String dia(int a) {
+		String dia="";
+		if(a==1) {
+			dia+="Lunes";
+		}
+		else if(a==2) {
+			dia+="Martes";
+		}
+		else if(a==3) {
+			dia+="Miercoles";
+		}
+		else if(a==4) {
+			dia+="Jueves";
+		}
+		else if(a==5) {
+			dia+="Viernes";
+		}
+		else if(a==6) {
+			dia+="Sabado";
+		}
+		else if(a==7) {
+			dia+="Domingo";
+		}
+		return dia;
+	}
+}
