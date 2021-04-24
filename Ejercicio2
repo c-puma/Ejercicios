@@ -1,0 +1,25 @@
+import java.util.*;
+public class Minimo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		int a,b,c,d;
+		System.out.println("Ingrese un digito");
+		a=sc.nextInt();
+		System.out.println("Ingrese un digito");
+		b=sc.nextInt();
+		System.out.println("Ingrese un digito");
+		c=sc.nextInt();
+		System.out.println("Ingrese un digito");
+		d=sc.nextInt();
+		System.out.println("El menor valor es: "+ hallarMinimo(a,b,c,d));
+	}
+	
+	public static int hallarMinimo(int a, int b, int c, int d) {
+		int minimo;
+		minimo= Math.min(Math.min(a, b), Math.min(c,d));
+		return minimo;
+	}
+}
