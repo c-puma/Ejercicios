@@ -1,0 +1,42 @@
+import java.util.*;
+public class Repetido {
+
+	static Scanner sc= new Scanner(System.in);
+	public static void main (String [] Args) {
+		
+		int cantidad;
+		System.out.println("Cuantos valores tendrá su arreglo:");
+		cantidad= sc.nextInt();
+		int [] arreglo= new int[cantidad];
+		
+		for(int i=0; i<arreglo.length;i++) {
+			System.out.println("Ingrese un valor");
+			arreglo[i]=sc.nextInt();
+		}
+		
+		for(int i=0;i<arreglo.length;i++) {
+			System.out.println(arreglo[i]);
+		}
+		
+		repetidos(arreglo);
+	}
+	
+	public static void repetidos( int [] arr) {
+		String nRepetidos="";
+		int contador=0;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]==arr[j]) {
+					nRepetidos+=arr[i]+", ";
+					contador++;
+				}
+			}
+		}
+		if(contador>0) {
+			System.out.println("Los repetidos son:" + nRepetidos);
+		}
+		else {
+			System.out.println("No hay repetidos");
+		}
+	}
+}
